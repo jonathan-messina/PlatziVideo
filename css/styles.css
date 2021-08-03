@@ -1,13 +1,198 @@
 
-
-header{
-    background-color: #21C08B;
-    width: 100%;
-    height: 5rem;
+body{
+    background-color: #8F57FD;
+    font-family: 'Mulish', sans-serif;
 }
 
-header img{
+/* ---------------------------------------------------------------------------------------- */
+/* -------------------------------------Header----------------------------------------- */
+/* ---------------------------------------------------------------------------------------- */
+
+
+.header{
+    background-color: #8F57FD;
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__img{
     width: 12.5rem;
     margin-top: 0.625rem;
     margin-left: 0.625rem;
+}
+
+.header__menu{
+    margin-right: 1.875rem;
+}
+
+.header__menu ul{
+    display: none;
+    list-style: none;
+    padding: 0px;
+    position: absolute;
+    width: 6.25rem;
+    text-align: right;
+    margin: 0px 0px 0px -0.875rem;
+}
+
+.header__menu:hover ul, ul:hover {
+    display: block;
+}
+
+.header__menu li {
+    margin: 0.625rem 0rem;
+}
+
+.header__menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+.header__menu li a:hover{
+    text-decoration: underline;
+
+}
+
+.header__menu--profile{
+    margin-right: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.header__menu--profile img{
+    margin-right: 0.5rem;
+    width: 2.5rem;
+    height:2.5rem;
+}
+
+.header__menu--profile p{
+    margin: 0px;
+    color: white;
+}
+
+
+/*--------------------------------------------------------------------------------------------*/
+/*------------------------------------------Main-----------------------------------------------*/
+/*--------------------------------------------------------------------------------------------*/
+
+.main{
+    height: 18.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__title{
+    color: white;
+    font-size: 1.5625rem;
+}
+
+.input{
+    border: 2px solid white;
+    border-radius: 40px;
+    color: white;
+    outline: none;
+    font-family: 'Mulish',sans-serif;
+    font-size: 1rem;
+    height: 3.125rem;
+    padding: 0px 1.25rem;
+    width: 70%;
+    background-color: rgba(255, 255, 255, 0.1);
+    }
+    ::placeholder{
+        color: white;
+    }
+
+
+/* ---------------------------------------------------------------------------------------- */
+/* ----------------------------------------Carousel----------------------------------------- */
+/* ---------------------------------------------------------------------------------------- */
+
+.carousel{
+    width: 100%;
+    overflow: scroll;
+    padding: 1.875rem ;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.carousel__container{
+    white-space: nowrap;
+    margin: 4.375rem 0px;
+    padding-bottom: 0.625rem;
+}
+
+.carousel-item{
+    width: 12.5rem;
+    height: 15.625rem;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    margin-right: 0.625rem;
+    display: inline-block;
+    cursor: pointer;
+    transition: 450ms all;
+    transform-origin: center left;
+}
+
+.carousel-item:hover ~ .carousel-item {
+    transform: translate3d(6.25rem, 0, 0);
+}
+
+    .carousel__container:hover .carousel-item{
+        opacity: 0.3;
+    }
+
+    .carousel__container:hover .carousel-item:hover{
+        transform: scale(1.5);
+        opacity: 1;
+    }
+
+.carousel-item__img{
+    width: 12.5rem;
+    height: 15.625rem;
+    object-fit: cover;
+}
+
+.carousel-item__details{
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0% rgba(0,0,0,0) 100%);
+    font-size: 0.625rem;
+    opacity: 0;
+    transition: 450ms opacity;
+    padding: 0.625rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+
+
+/* -------------------------------------------------------------------------------------- */
+/* --------------------------------------Footer-------------------------------------------- */
+/* ------------------------------------------------------------------------------------------ */
+
+.footer{
+    background-color: #8F57FD;
+    display: flex;
+    align-items: center;
+    height: 6.25rem;
+    width: 100%;
+}
+
+.footer a{
+    color: white;
+    cursor: pointer;
+    font-size: 0.875rem;
+    text-decoration: none;
+    padding-left: 1.875rem;
+}
+
+.footer a:hover{
+    text-decoration: underline;
 }
